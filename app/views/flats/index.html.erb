@@ -4,13 +4,13 @@
       <img src="http://source.unsplash.com/featured/?london&<%= rand(1000) %>)" />
       <div class="card-trip-infos">
         <div>
-          <h2><%= flat.name %></h2>
+          <%= link_to     flat_path(flat), class: "title" do  %>
+            <%# <i class="fa-solid fa-circle-info card-trip-user avatar-bordered"></i> %>
+            <h2> <%= flat.name %></h2>
+            <%# <img src="htt¥ps://kitt.lewagon.com/placeholder/users/krokrob" class="" /> %>
+          <% end %>
         </div>
-        <h2 class="card-trip-pricing">£<%= flat.price_per_night %></h2>
-        <%= link_to  flat_path(flat) do  %>
-          <i class="fa-solid fa-circle-info card-trip-user avatar-bordered"></i>
-          <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="" /> %>
-        <% end %>
+        <h2 class="card-trip-pricing"> ¥<%= flat.price_per_night %></h2>
       </div>
     </div>
   <% end %>

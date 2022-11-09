@@ -1,0 +1,17 @@
+<div class="h-100 p-3 bg-light border rounded-3 my-3 shadow">
+  <div class="h-100 p-3  border rounded-3 my-3 shadow-sm" style="--bs-bg-opacity: .5">
+    <h2> <%= @flat.name %> </h2>
+    <p><%= @flat.address %></p>
+  </div>
+  <div class="h-100 p-3  border rounded-3 my-3 shadow-sm" style="--bs-bg-opacity: .5">
+    <h2> Description </h2>
+    <p><%= @flat.description %></p>
+  </div>
+  <div class="h-100 p-3  border rounded-3 my-3 shadow-sm" style="--bs-bg-opacity: .5">
+    <h2> Details </h2>
+    <div class="d-flex">
+      <p> <i class="fa-solid fa-yen-sign"> </i><%= @flat.price_per_night %></p>
+      <p> <i class="fa-solid fa-user-group"></i><%= @flat.number_of_guests %></p>
+    </div>
+  </div>
+</div>
