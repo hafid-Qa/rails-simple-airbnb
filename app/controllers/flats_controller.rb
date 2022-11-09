@@ -3,9 +3,9 @@ class FlatsController < ApplicationController
     @flats = Flat.all
   end
 
-  # def show
-  #   @flat = flat.find(params[:id])
-  # end
+  def show
+    @flat = Flat.find(params[:id])
+  end
 
   # def create
   #   @flat = flat.new(params[:flat])
