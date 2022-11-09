@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts ' cleaning out database'
+
+Flat.destroy_all
+
+puts 'creating flats'
+
+10.times do
+  Flat.create!(
+    name: "Light & Spacious Garden Flat #{Faker::Address.city}",
+    address: Faker::Address.street_address,
+    description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
+    price_per_night: rand(50..150),
+    number_of_guests: rand(2..6)
+  )
+end
+puts ' seeding completed'
