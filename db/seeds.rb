@@ -15,7 +15,7 @@ puts 'creating flats'
 10.times do
   Flat.create!(
     name: "Light & Spacious Garden Flat #{Faker::Address.city}",
-    address: Faker::Address.street_address,
+    address: %w[kyoto tokyo nagoya osaka].sample,
     description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
     price_per_night: rand(50..150),
     number_of_guests: rand(2..6)
